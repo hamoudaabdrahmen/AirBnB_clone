@@ -54,3 +54,19 @@ class BaseModel:
         models.storage.save()
 
     
+def to_dict(self):
+        """returns a dictionary containing all keys/values
+        of _dict_ of the instance."""
+        # Define a dictionary and key _class_ that add to this dictionary
+        # with the class name of the object
+        tdic = {}
+        tdic["_class_"] = type(self).__name__
+        # loop over dict items and validate created_at and updated_at to
+        # convert in ISO format
+        for n, i in self.__dict__.items():
+            if isinstance(i, datetime):
+                tdic[n] = i.isoformat()
+            else:
+                tdic[n] = i
+        return (tdic)
+

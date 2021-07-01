@@ -1,8 +1,14 @@
 #!/usr/bin/python3
-""" State where user's come from """
-from . base_model import BaseModel
+"""This is the State Model module.
+Contains the State class that inherits from BaseModel.
+"""
+from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """ Define the state of the user """
-    name = ''
+    """This class defines a State.
+    Attributes:
+        name (str): the state's name.
+    """
+
+    name = ""

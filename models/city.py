@@ -1,9 +1,16 @@
-#!/user/bin/python3
-""" City where user's come from """
-from . base_model import BaseModel
+#!/usr/bin/python3
+"""This is the City Model module.
+Contains the City class that inherits from BaseModel.
+"""
+from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """ city of the user """
-    state_id = ''
-    name = ''
+    """This class defines a City.
+    Attributes:
+        state_id (str): the city's state id.
+        name (str): the city's name.
+    """
+
+    state_id = ""
+    name = ""
